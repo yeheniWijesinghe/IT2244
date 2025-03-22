@@ -1,0 +1,4 @@
+@echo off
+echo Current date: %DATE% ::display the current date from the system
+echo Current time: %TIME% ::display the current time from the system
+pause
