@@ -15,6 +15,7 @@ mkdir Criteria_03
 cd Criteria_03
 mkdir Standard_01
 mkdir Standard_02
+cd..
 mkdir Criteria_03
 cd Criteria_03
 mkdir Standard_01
