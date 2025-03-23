@@ -1,0 +1,62 @@
+
+touch - create a file.
+
+[yeheni@DESKTOP-CF9TBQU ~]$ touch cake.txt
+
+vi - Open a file
+	Switch to Insert Mode (to start typing):
+		>>Press i (insert) or a (append).
+
+	Save and Exit:
+		>>Press ctrl + c, then type :wq! and press Enter.
+
+[yeheni@DESKTOP-CF9TBQU ~]$ vi cake.txt
+
+more - give the data inside the file.
+
+[yeheni@DESKTOP-CF9TBQU ~]$ more cake.txt
+Cup cakes
+Chocolate cake
+Bownies
+Red velvet
+
+dir - display all the files in the directory.
+dir *.txt - display all the files with .txt extension.
+
+[yeheni@DESKTOP-CF9TBQU ~]$ dir *.txt
+abc.txt  cake.txt  xyz.txt
+
+find - search for files and directories.
+find *y* - search for all the directories and files with the character "y"
+
+[yeheni@DESKTOP-CF9TBQU ~]$ find *y*
+xyz.txt
+
+chmod(Change Mode) – file permission command.
+444 - file is read only for user, server and admin.
+
+[yeheni@DESKTOP-CF9TBQU ~]$ chmod 444 cake.txt
+
+ls -l	Long format (detailed view).
+
+[yeheni@DESKTOP-CF9TBQU ~]$ ls -l
+total 8
+-rw-r--r-- 1 yeheni yeheni  0 Mar 22 20:56 abc.txt
+-r--r--r-- 1 yeheni yeheni 44 Mar 23 16:20 cake.txt
+-r--r--r-- 1 yeheni yeheni 28 Mar 23 16:11 xyz.txt
+
+777 - Anyone(user, server and admin) can read write and execute cake.txt file.
+
+[yeheni@DESKTOP-CF9TBQU ~]$ chmod 777 cake.txt
+[yeheni@DESKTOP-CF9TBQU ~]$ ls -l
+total 8
+-rw-r--r-- 1 yeheni yeheni  0 Mar 22 20:56 abc.txt
+-rwxrwxrwx 1 yeheni yeheni 44 Mar 23 16:20 cake.txt
+-r--r--r-- 1 yeheni yeheni 28 Mar 23 16:11 xyz.txt
+
+[yeheni@DESKTOP-CF9TBQU ~]$ chmod 547 cake.txt
+[yeheni@DESKTOP-CF9TBQU ~]$ ls -l
+total 8
+-rw-r--r-- 1 yeheni yeheni  0 Mar 22 20:56 abc.txt
+-r-xr--rwx 1 yeheni yeheni 44 Mar 23 16:20 cake.txt
+-r--r--r-- 1 yeheni yeheni 28 Mar 23 16:11 xyz.txt
