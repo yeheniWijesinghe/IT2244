@@ -1,0 +1,128 @@
+cal - display the calander.
+[yeheni@DESKTOP-CF9TBQU ~]$ cal
+     March 2025
+Su Mo Tu We Th Fr Sa
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+30 31
+
+date +%d - display the date 'DD' format.
+[yeheni@DESKTOP-CF9TBQU ~]$ date +%d
+24
+
+date +%m - display the month in 'MM' format.
+[yeheni@DESKTOP-CF9TBQU ~]$ date +%m
+03
+
+date +%y - display the year in 'YY' format.
+[yeheni@DESKTOP-CF9TBQU ~]$ date +%y
+25
+
+date +%D - display the date in 'MM/DD/YY' format.
+[yeheni@DESKTOP-CF9TBQU ~]$ date +%D
+03/24/25
+
+date +%Y - display the year in 'YYYY' format.
+[yeheni@DESKTOP-CF9TBQU ~]$ date +%Y
+2025
+
+date +%B - display the month in word format.
+[yeheni@DESKTOP-CF9TBQU ~]$ date +%B
+March
+
+date +%b - display the month in word format.
+[yeheni@DESKTOP-CF9TBQU ~]$ date +%b
+Mar
+
+date +%A - display the day in word format.
+[yeheni@DESKTOP-CF9TBQU ~]$ date +%A
+Monday
+
+date +%a - display the day in word format.
+[yeheni@DESKTOP-CF9TBQU ~]$ date +%a
+Mon
+
+date +%h - display the month in word format.
+[yeheni@DESKTOP-CF9TBQU ~]$ date +%h
+Mar
+
+//Example 01
+
+[yeheni@DESKTOP-CF9TBQU ~]$ vi example01.sh
+
+echo "Who are you?"
+read name
+echo "Enter number 1"
+read x
+echo "Enter number 2"
+read y
+echo "Enter number 3"
+read z
+
+sum=$(($x+$y+$z))
+avg=$(($sum/3))
+echo "Hi" $name
+echo "Summation	" $sum
+echo "Average	" $avg
+
+[yeheni@DESKTOP-CF9TBQU ~]$ ls
+abc.txt  cake.txt  example01.sh  xyz.txt
+
+[yeheni@DESKTOP-CF9TBQU ~]$ chmod 777 example01.sh
+
+[yeheni@DESKTOP-CF9TBQU ~]$ ls
+abc.txt  cake.txt  example01.sh  xyz.txt
+
+[yeheni@DESKTOP-CF9TBQU ~]$ ./example01.sh
+Who are you?
+Yeheni
+Enter number 1
+4
+Enter number 2
+5
+Enter number 3
+6
+Sum:  15
+Avg:  5
+
+//Example 02
+Read two number from user and print 
+addition, subtraction, multiplication and divition.
+
+[yeheni@DESKTOP-CF9TBQU ~]$ vi example02.sh
+
+echo "Enter a"
+read a
+echo "Enter number b"
+read b
+
+sum=$(($a+$b))
+sub=$(($a-$b))
+mul=$(($a*$b))
+div=$(($a/$b))
+
+echo "Summation	" $sum
+echo "Subtraction	" $sub
+echo "Multiplication	" $mul
+echo "Division	" $div
+
+[yeheni@DESKTOP-CF9TBQU ~]$ ls
+abc.txt  cake.txt  example01.sh  example02.sh  xyz.txt
+
+[yeheni@DESKTOP-CF9TBQU ~]$ chmod 777 example02.sh
+
+[yeheni@DESKTOP-CF9TBQU ~]$ ls
+abc.txt  cake.txt  example01.sh  example02.sh  xyz.txt
+
+[yeheni@DESKTOP-CF9TBQU ~]$ ./example02.sh
+Enter a:
+10
+Enter b:
+5
+Summation:  15
+Subtraction:  5
+Multiplication:  50
+Division:  2
