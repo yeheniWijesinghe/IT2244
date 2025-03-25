@@ -1,0 +1,180 @@
+touch - Creates a file 'abc.tsv'.
+[yeheni@DESKTOP-CF9TBQU ~]$ touch yen.tsv
+
+vi - Open the file "abc.tsv" using the "vi" text editor.
+[yeheni@DESKTOP-CF9TBQU ~]$ vi yen.tsv
+
+ls - a - Lists all files including hidden files, in the current directory.
+[yeheni@DESKTOP-CF9TBQU ~]$ ls -a
+.   .bash_history  .bash_profile  abc.txt   example01.sh  xyz.txt
+..  .bash_logout   .bashrc        cake.txt  example02.sh  yen.tsv
+
+//Extracts the tab seperated first column.
+[yeheni@DESKTOP-CF9TBQU ~]$ cut -d$'\t' -f1 yen.tsv
+aa
+bb
+cc
+dd
+ee
+ff
+gg
+hh
+
+// Extracts the third column using space as a delimiter.
+[yeheni@DESKTOP-CF9TBQU ~]$ cut -d " " -f3 yen.tsv
+aa      1       2       3
+bb      2       3       4
+cc      3       4       5
+dd      4       5       6
+ee      5       6       7
+ff      6       7       8
+gg      7       8       9
+hh      8       9       10
+
+// Extracts the third column using tab as a delimiter.
+[yeheni@DESKTOP-CF9TBQU ~]$ cut -d$'\t' -f3 yen.tsv
+2
+3
+4
+5
+6
+7
+8
+9
+
+//Displays the first 2 lines of abc.tsv.
+[yeheni@DESKTOP-CF9TBQU ~]$ head -n2 yen.tsv
+aa      1       2       3
+bb      2       3       4
+
+//Displays the last 2 lines of abc.tsv.
+[yeheni@DESKTOP-CF9TBQU ~]$ tail -n2 yen.tsv
+gg      7       8       9
+hh      8       9       10
+
+// Edit the abc.tsv file, remove tabs and add spaces between values.
+[yeheni@DESKTOP-CF9TBQU ~]$ vi yen.tsv
+
+// Again Extracts the tab seperated first column.
+[yeheni@DESKTOP-CF9TBQU ~]$ cut -d\t -f1 yen.tsv
+aa 1 2 3
+bb 2 3 4
+cc 3 4 5
+dd 4 5 6
+ee 5 6 7
+ff 6 7 8
+gg 7 8 9
+hh 8 9 10
+
+//Again Extracts the space seperated first column.
+[yeheni@DESKTOP-CF9TBQU ~]$ cut -d' ' -f1 yen.tsv
+aa
+bb
+cc
+dd
+ee
+ff
+gg
+hh
+
+// Extracts the space seperated second column.
+[yeheni@DESKTOP-CF9TBQU ~]$ cut -d' ' -f3 yen.tsv
+2
+3
+4
+5
+6
+7
+8
+9
+
+// Display first 10 lines.
+[yeheni@DESKTOP-CF9TBQU ~]$ head yen.tsv
+aa 1 2 3
+bb 2 3 4
+cc 3 4 5
+dd 4 5 6
+ee 5 6 7
+ff 6 7 8
+gg 7 8 9
+hh 8 9 10
+
+// Display first 8 lines (from head).
+[yeheni@DESKTOP-CF9TBQU ~]$ head -5 yen.tsv
+aa 1 2 3
+bb 2 3 4
+cc 3 4 5
+dd 4 5 6
+ee 5 6 7
+
+// Display last 5 lines (from head).
+[yeheni@DESKTOP-CF9TBQU ~]$ tail -5 yen.tsv
+dd 4 5 6
+ee 5 6 7
+ff 6 7 8
+gg 7 8 9
+hh 8 9 10
+
+// Display first line.
+[yeheni@DESKTOP-CF9TBQU ~]$ head -1 yen.tsv
+aa 1 2 3
+
+// Display last line.
+[yeheni@DESKTOP-CF9TBQU ~]$ tail -1 yen.tsv
+hh 8 9 10
+
+// Display first 100 lines (from head).
+[yeheni@DESKTOP-CF9TBQU ~]$ head -100 yen.tsv
+aa 1 2 3
+bb 2 3 4
+cc 3 4 5
+dd 4 5 6
+ee 5 6 7
+ff 6 7 8
+gg 7 8 9
+hh 8 9 10
+
+// Extracts the 8th line.
+[yeheni@DESKTOP-CF9TBQU ~]$ head -n8 yen.tsv | tail -n1
+hh 8 9 10
+
+// Prints the entire file using awk.
+[yeheni@DESKTOP-CF9TBQU ~]$ awk '{print'} yen.tsv
+aa 1 2 3
+bb 2 3 4
+cc 3 4 5
+dd 4 5 6
+ee 5 6 7
+ff 6 7 8
+gg 7 8 9
+hh 8 9 10
+
+// Prints the number of columns (seperated by space).
+[yeheni@DESKTOP-CF9TBQU ~]$ awk '{print NF; exit'} yen.tsv
+4
+
+// Prints the 3rd column using awk.
+[yeheni@DESKTOP-CF9TBQU ~]$ awk '{print $3'} yen.tsv
+2
+3
+4
+5
+6
+7
+8
+9
+
+wc -l - Count the number of lines.
+[yeheni@DESKTOP-CF9TBQU ~]$ wc -l yen.tsv
+8 yen.tsv
+
+// Extracts the first 10 lines and Search for "dd" in those first 10 lines.
+[yeheni@DESKTOP-CF9TBQU ~]$ head -n5 yen.tsv | grep 'dd'
+dd 4 5 6
+
+// Extracts the first 7 lines and Search for "56" in those first 10 lines.
+[yeheni@DESKTOP-CF9TBQU ~]$ head -n7 yen.tsv | grep '6'
+dd 4 5 6
+ee 5 6 7
+ff 6 7 8
+
