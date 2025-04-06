@@ -1,0 +1,202 @@
+Q1) Get the calender and date
+
+[yeheni@DESKTOP-CF9TBQU ~]$ cal
+     April 2025
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30
+
+[yeheni@DESKTOP-CF9TBQU ~]$ date
+Sun Apr  6 12:46:10 +0530 2025
+
+Q2) Get the student name and marks for the 3 subjects from 
+user then calculate 
+
+	Output: 
+		Enter the name: Isuru
+		Enter the mark for subject1 : 80
+		Enter the mark for subject2 : 90
+		Enter the mark for subject3 : 70
+		Total = 240
+		Average = 80
+		
+
+Sun Apr  6 20:19:45 +0530 2025
+[yeheni@DESKTOP-CF9TBQU ~]$ vi question02.sh
+
+echo 'Enter the name: '
+read name
+echo 'Enter the mark for subject1 : '
+read sub1
+echo 'Enter the mark for subject2 : '
+read sub2
+echo 'Enter the mark for subject3 : '
+read sub3
+
+total=$(($sub1+$sub2+$sub3))
+avg=$(($total/3))
+
+echo 'Total = ' $total
+echo 'Average = ' $avg:
+
+[yeheni@DESKTOP-CF9TBQU ~]$ chmod 777 question02.sh
+[yeheni@DESKTOP-CF9TBQU ~]$ ./question02.sh
+Enter the name:
+Yeheni
+Enter the mark for subject1 :
+70
+Enter the mark for subject2 :
+80
+Enter the mark for subject3 :
+90
+Total =  240
+Average =  80	
+		
+Q3) Create calculator with arithmetic operators 
+
+	Output: 
+		Enter the first number: 4
+		Enter the second number: 2
+		Summation: 6
+		Substraction: 6
+		Division: 2
+		Multiplication: 8
+		
+[yeheni@DESKTOP-CF9TBQU ~]$ vi question03.sh
+echo 'Enter the first number: '
+read a
+echo 'Enter the second number: '
+read b
+
+sum=$(($a+$b))
+sub=$(($a-$b))
+mul=$(($a*$b))
+div=$(($a/$b))
+
+echo 'Summation: ' $sum
+echo 'Substraction: ' $sub
+echo 'Division: ' $div
+echo 'Multiplication: ' $mul
+[yeheni@DESKTOP-CF9TBQU ~]$ chmod 777 question03.sh
+[yeheni@DESKTOP-CF9TBQU ~]$ ./question03.sh
+Enter the first number:
+5
+Enter the second number:
+2
+Summation:  7
+Substraction:  3
+Division:  2
+Multiplication:  10
+		
+Q4) Get the days based on the user input number
+	
+	Output:
+		Enter the number: 5
+		Friday
+		
+[yeheni@DESKTOP-CF9TBQU ~]$ vi question04.sh
+echo "Enter the number: "
+read num
+case $num in
+1)echo "Monday";;
+2)echo "Tuesday";;
+3)echo "Wednesday";;
+4)echo "Thursday";;
+5)echo "Friday";;
+6)echo "Saturday";;
+7)echo "Sunday";;
+*)echo "Unrecognized number";;
+esac
+[yeheni@DESKTOP-CF9TBQU ~]$ chmod 777 question04.sh
+[yeheni@DESKTOP-CF9TBQU ~]$ ./question04.sh
+Enter the number:
+5
+Friday
+		
+Q5)	Verify whether your username is correct or not(use your name as incorrect)
+	Output:
+		Enter user name:
+		Mino
+		Username is correct
+		Enter user name:
+		mino
+		Username is incorrect
+		
+[yeheni@DESKTOP-CF9TBQU ~]$ vi question05.sh
+echo 'Enter user name; '
+read name
+
+username="Mino"
+
+if [ "$username" == "$name" ]; then
+echo 'Username is correct'
+else
+echo 'Username is incorrect'
+fi
+
+[yeheni@DESKTOP-CF9TBQU ~]$ ./question05.sh
+Enter user name;
+Mino
+Username is correct
+[yeheni@DESKTOP-CF9TBQU ~]$ ./question05.sh
+Enter user name;
+yeheni
+Username is incorrect		
+		
+		
+Q6)	Output: Enter two numbers:
+		7 5
+		7 is greater than 5
+	
+	Output: Enter two numbers:
+		1 9
+		1 is less than 9
+		
+[yeheni@DESKTOP-CF9TBQU ~]$ vi question06.sh
+[yeheni@DESKTOP-CF9TBQU ~]$ chmod 777 question06.sh		
+echo 'Enter two numbers: '
+read num1 num2
+if [ $num1 -gt $num2 ]; then
+echo $num1 ' is greater than ' $num2
+elif [ $num1 -lt $num2 ]; then
+echo $num1 ' is less than ' $num2
+else
+echo $num1 ' is equal to ' $num2
+fi		
+[yeheni@DESKTOP-CF9TBQU ~]$ ./question06.sh
+Enter two numbers:
+7 5
+7  is greater than  5
+		
+Q7) Create simple calculator using "expr" command same as the Q3
+
+[yeheni@DESKTOP-CF9TBQU ~]$ vi question07.sh
+[yeheni@DESKTOP-CF9TBQU ~]$ chmod 777 question07.sh
+echo "Enter the first number: "
+read num1
+echo "Enter the first number: "
+read num2
+
+sum=$(expr $num1 + $num2)
+sub=$(expr $num1 - $num2)
+div=$(expr $num1 / $num2)
+mul=$(expr $num1 \* $num2)
+
+echo 'Summation: ' $sum
+echo 'Substraction: ' $sub
+echo 'Division: ' $div
+echo 'Multiplication: ' $mul		
+[yeheni@DESKTOP-CF9TBQU ~]$ ./question07.sh
+Enter the first number:
+5
+Enter the first number:
+2
+Summation:  7
+Substraction:  3
+Division:  2
+Multiplication:  10		
+		
+		
