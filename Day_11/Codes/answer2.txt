@@ -1,0 +1,17 @@
+awk -F, 'NR==1 || $4 > 3.5' question2.csv
+
+awk -F, 'NR>1 {sum+=$4; count++} END {if (count > 0) print "Average GPA", sum/count}' question2.csv
+
+ans:-
+[yeheni@DESKTOP-CF9TBQU ~]$ vi question2.csv
+[yeheni@DESKTOP-CF9TBQU ~]$ awk -F, 'NR==1 || $4 > 3.5' question2.csv
+Name,Age,Department,GPA
+Priya,21,Environmentscience,3.7
+Carol,23,Physicalscience,3.99
+David,21,IT,3.98
+Riya,22,Physicalscience,3.6
+Rahman,21,Environmentscience,3.7
+Anna,23,Physicalscience,3.78
+Riyas,21,IT,3.76
+[yeheni@DESKTOP-CF9TBQU ~]$ awk -F, 'NR>1 {sum+=$4; count++} END {if (count > 0) print "Average GPA", sum/count}' question2.csv
+Average GPA 3.511
