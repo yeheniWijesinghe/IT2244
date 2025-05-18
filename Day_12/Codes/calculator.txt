@@ -1,0 +1,19 @@
+Calculator
+
+#include<stdio.h>
+
+int main(){
+	int a;
+	printf("Enter a: ");
+	scanf("%d", &a);
+	int b;
+	printf("Enter b: ");
+	scanf("%d", &b);
+	printf("Sum: %d\n", (a+b));
+	printf("Sub: %d\n", (a-b));
+	printf("Mul: %d\n", (a*b));
+	printf("Div: %d\n", (a/b));
+	printf("Remainder: %d\n", (a%b));
+	
+return 0;
+}

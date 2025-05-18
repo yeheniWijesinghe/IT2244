@@ -1,0 +1,23 @@
+04 - user input
+
+#include<stdio.h>
+int main(){
+int age;
+	printf("Enter your age: ");
+	scanf("%d", &age);
+	
+	printf("Age = %d\n",age);
+	
+	double height;
+	printf("Enter your height: ");
+	scanf("%lf", &height);
+	printf("Height = %.2lf\n", height);
+	
+	double number;
+	char alpha;
+	printf("Enter inputs: ");
+	scanf("%lf %c", &number,&alpha);
+	printf("Number = %lf\n", number);
+	printf("Character = %c\n", alpha);
+	
+return 0;
