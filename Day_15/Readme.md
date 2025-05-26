@@ -7,6 +7,7 @@ int main(){
 	printf("Hello World!\n");
 }
 ```
+Answer :
 ```
 [2021ict39@fedora ~]$ ./fork
 Hello World!
@@ -22,6 +23,7 @@ int main(){
 	printf("Hello World!\n");
 }
 ```
+Answer :
 ```
 [2021ict39@fedora ~]$ ./fork
 Hello World!
@@ -44,6 +46,7 @@ int main(){
 	return 0;
 }
 ```
+Answer :
 ```
 [2021ict39@fedora ~]$ ./fork
 I'm the parent!
@@ -76,6 +79,7 @@ int main(){
 	return 0;
 }
 ```
+Answer :
 ```
 [2021ict39@fedora ~]$ ./ex1
 I'm the parent!
@@ -109,6 +113,7 @@ int main(){
 	return 0;
 }
 ```
+Answer :
 ```
 [2021ict39@fedora ~]$ ./ex1
 6 7 8 9 10
