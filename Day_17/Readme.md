@@ -69,7 +69,6 @@ int main(){
 	return 0;
 }
 ```
-```
 ans:-
 ```
 [2021ict39@fedora ~]$ vi ex3.c
