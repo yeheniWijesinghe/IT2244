@@ -7,10 +7,11 @@ int main(){
 	printf("Hello World!\n");
 }
 ```
+```
 [2021ict39@fedora ~]$ ./fork
 Hello World!
 Hello World!
-
+```
 ```
 //02
 #include<stdio.h>
@@ -21,13 +22,13 @@ int main(){
 	printf("Hello World!\n");
 }
 ```
-
+```
 [2021ict39@fedora ~]$ ./fork
 Hello World!
 Hello World!
 Hello World!
 Hello World!
-
+```
 ```
 //03
 #include<stdio.h>
@@ -43,11 +44,11 @@ int main(){
 	return 0;
 }
 ```
-
+```
 [2021ict39@fedora ~]$ ./fork
 I'm the parent!
 I'm the child!
-
+```
 ```
 //04
 #include<stdio.h>
@@ -75,7 +76,7 @@ int main(){
 	return 0;
 }
 ```
-
+```
 [2021ict39@fedora ~]$ ./ex1
 I'm the parent!
 6 7 8 9 10
@@ -83,7 +84,7 @@ Summation of parent process: 40
 I'm the child!
 1 2 3 4 5
 Summation of child process: 15
-
+```
 ```
 //05
 #include<stdio.h>
@@ -108,10 +109,10 @@ int main(){
 	return 0;
 }
 ```
-
+```
 [2021ict39@fedora ~]$ ./ex1
 6 7 8 9 10
 Summation : 40
 1 2 3 4 5
 Summation : 15
-
+```
