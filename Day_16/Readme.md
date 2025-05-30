@@ -91,7 +91,6 @@ int main() {
 Answer:-
 
 ```
-[2021ict39@fedora ~]$ ./ex2
 
 I'm A
 My pid: 18134
