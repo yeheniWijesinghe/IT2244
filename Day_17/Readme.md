@@ -19,9 +19,6 @@ int main(){
 ```
 ans:-
 ```
-[2021ict39@fedora ~]$ vi ex3.c
-[2021ict39@fedora ~]$ gcc ex3.c -o ex3
-[2021ict39@fedora ~]$ ./ex3
 Program started.
 Sleeping for 3 seconds...
 Exiting the program.
@@ -71,9 +68,6 @@ int main(){
 ```
 ans:-
 ```
-[2021ict39@fedora ~]$ vi ex3.c
-[2021ict39@fedora ~]$ gcc ex3.c -o ex3
-[2021ict39@fedora ~]$ ./ex3
 Parent process started. PID: 9518
 Parent waiting for child to finish...
 Child process. PID: 9519, Sleeping for 2 sec...
@@ -134,9 +128,6 @@ int main(){
 ```
 ans:-
 ```
-[2021ict39@fedora ~]$ vi ex4.c
-[2021ict39@fedora ~]$ gcc ex4.c -o ex4
-[2021ict39@fedora ~]$ ./ex4
 Parent process started. PID: 15513
 Parent waiting for child to finish...
 Child process has started. Sleeping for 1 sec
