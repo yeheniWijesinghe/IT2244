@@ -1,4 +1,4 @@
-Exercise 01
+Exercise 
 
 ```
 
