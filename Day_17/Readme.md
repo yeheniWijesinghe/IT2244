@@ -19,7 +19,7 @@ int main(){
 	return 0;
 }
 ```
-ans:-
+Answer:-
 ```
 Program started.
 Sleeping for 3 seconds...
@@ -70,7 +70,7 @@ int main(){
 	return 0;
 }
 ```
-ans:-
+Answer:-
 ```
 Parent process started. PID: 9518
 Parent waiting for child to finish...
@@ -131,7 +131,7 @@ int main(){
 	return 0;
 }
 ```
-ans:-
+Answer:-
 ```
 Parent process started. PID: 15513
 Parent waiting for child to finish...
