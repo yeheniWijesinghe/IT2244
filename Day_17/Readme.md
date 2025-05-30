@@ -1,5 +1,7 @@
+
+Exercise 03
+
 ```
-//ex3
 #include<stdio.h>
 #include<unistd.h>//sleep,fork
 #include<stdlib.h>//exit
@@ -23,8 +25,10 @@ Program started.
 Sleeping for 3 seconds...
 Exiting the program.
 ```
+
+Exercise 04
+
 ```
-//ex4
 #include<stdio.h>
 #include<unistd.h>//sleep,fork
 #include<stdlib.h>//exit
@@ -75,9 +79,10 @@ Child process exiting.
 Child exited with status: 0
 Parent process ending.
 ```
+
+Exercise 05
+
 ```
-//ex4
-Exercise:
 first child: sleep for 1 sec
 second child: sleep for 3 sec
 parent: both children have finished
