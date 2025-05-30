@@ -1,33 +1,7 @@
+Exercise 01
+
 ```
- //01
- #include<stdio.h>
- #include<unistd.h>
- int A,B,C;
- int main(){
-	 int f = fork();
-	 if(f==0){
-		 printf("I'm the child!\nMy ppid is %d\n",getppid());
-		 int fac=1;
-		 for(int i=1; i<=A; i++){
-			 fac*=i;
-		 }
-		 printf("Factorial of %d is \n",fac);
-	 }
-	 else{
-		 
-		printf("I'm the parent!\nMy pid is %d\n",getpid()); 
-		printf("Enter A: ");
-        scanf("%d", &A);
-        printf("Enter B: ");
-        scanf("%d", &B);
-        printf("Enter C: ");
-        scanf("%d", &C);
-	 }
-	 return 0;
- }
-```
-```
-//02
+
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/wait.h>
@@ -113,7 +87,9 @@ int main() {
     return 0;
 }
 ```
-ans:-
+
+Answer:-
+
 ```
 [2021ict39@fedora ~]$ ./ex2
 
@@ -152,5 +128,4 @@ My ppid: 18191
 My pid: 18202
 0 1 1 2 3 5
 6 is not a prime number.
-
-
+```
