@@ -175,3 +175,12 @@ int main(){
 	return 0;
 }
 ```
+Answer
+```
+[2021ict39@fedora ~]$ vi Ex02.c
+[2021ict39@fedora ~]$ gcc Ex02.c -o Ex02
+[2021ict39@fedora ~]$ ./Ex02
+6
+Child receives: -759250944
+Parent read: -759250944
+```
