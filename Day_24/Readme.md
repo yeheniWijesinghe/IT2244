@@ -211,7 +211,6 @@ int main() {
 
 answer
 ```
-      |     ^~~~~~
 [yeheni@DESKTOP-CF9TBQU ~]$ vi q05.c
 [yeheni@DESKTOP-CF9TBQU ~]$ gcc q05.c -o q05
 [yeheni@DESKTOP-CF9TBQU ~]$ ./q05
